@@ -1,0 +1,32 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile 'org.springframework:spring-context:4.1.7.RELEASE'
+    compile 'org.aspectj:aspectjrt:1.8.6'
+    compile 'org.aspectj:aspectjweaver:1.8.6'
+    compile 'org.aspectj:aspectjlib:1.6.2'
+}
+
+jar {
+    baseName = 'spring-helloworld-test'
+    version =  '0.1.1'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest {
+        attributes 'Main-Class': 'test.MainApp'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'test.MainApp'

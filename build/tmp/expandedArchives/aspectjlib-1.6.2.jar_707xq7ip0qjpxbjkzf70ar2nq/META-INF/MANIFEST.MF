@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+
+Name: org/aspectj/lib/
+Specification-Title: AspectJ Library Classes 
+Specification-Version: 1.6
+Specification-Vendor: aspectj.org
+Implementation-Title: org.aspectj.lib
+Implementation-Version: 1.6.2
+Implementation-Vendor: aspectj.org
+Bundle-Name: AspectJ
+Bundle-Version: 1.6
+Import-Package: org.aspectj.lib,org.aspectj.lib.pointcuts
+Bundle-Copyright: (C) Copyright 2005 Contributors. 
+  All Rights Reserved.
+
+
+
+
